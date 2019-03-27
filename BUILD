@@ -20,7 +20,7 @@ go_library(
     visibility = ["//visibility:private"],
     deps = [
         "//module:go_default_library",
-        "//vendor/github.com/lnnujxxy/protoc-gen-star:go_default_library",
-        "//vendor/github.com/lnnujxxy/protoc-gen-star/lang/go:go_default_library",
+        "//vendor/github.com/lyft/protoc-gen-star:go_default_library",
+        "//vendor/github.com/lyft/protoc-gen-star/lang/go:go_default_library",
     ],
 )

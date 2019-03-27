@@ -11,8 +11,8 @@ go_library(
     deps = [
         "//templates:go_default_library",
         "//validate:go_default_library",
-        "//vendor/github.com/lnnujxxy/protoc-gen-star:go_default_library",
-        "//vendor/github.com/lnnujxxy/protoc-gen-star/lang/go:go_default_library",
+        "//vendor/github.com/lyft/protoc-gen-star:go_default_library",
+        "//vendor/github.com/lyft/protoc-gen-star/lang/go:go_default_library",
         "@com_github_golang_protobuf//proto:go_default_library",
         "@com_github_golang_protobuf//ptypes:go_default_library",
         "@com_github_golang_protobuf//ptypes/duration:go_default_library",

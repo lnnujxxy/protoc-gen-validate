@@ -42,7 +42,7 @@
 
 [[projects]]
   digest = "1:713a7f3eed52cdfec4ff27cd5dce8de1bbaf7b1a9e5074d4e4547d1001fec0ff"
-  name = "github.com/lnnujxxy/protoc-gen-star"
+  name = "github.com/lyft/protoc-gen-star"
   packages = [
     ".",
     "lang/go",
@@ -98,8 +98,8 @@
     "github.com/golang/protobuf/ptypes/timestamp",
     "github.com/golang/protobuf/ptypes/wrappers",
     "github.com/iancoleman/strcase",
-    "github.com/lnnujxxy/protoc-gen-star",
-    "github.com/lnnujxxy/protoc-gen-star/lang/go",
+    "github.com/lyft/protoc-gen-star",
+    "github.com/lyft/protoc-gen-star/lang/go",
     "golang.org/x/net/context",
   ]
   inputs-digest = "64d19afa87ef4ac27f2c796d73d1566bcad2862fe2b71a91d0b194e2770126e5"

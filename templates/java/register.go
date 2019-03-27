@@ -10,8 +10,8 @@ import (
 	"github.com/golang/protobuf/ptypes/duration"
 	"github.com/golang/protobuf/ptypes/timestamp"
 	"github.com/iancoleman/strcase"
-	"github.com/lnnujxxy/protoc-gen-star"
-	"github.com/lnnujxxy/protoc-gen-star/lang/go"
+	"github.com/lyft/protoc-gen-star"
+	"github.com/lyft/protoc-gen-star/lang/go"
 	"github.com/lnnujxxy/protoc-gen-validate/templates/shared"
 )
 

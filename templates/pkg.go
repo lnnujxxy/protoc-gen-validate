@@ -3,8 +3,8 @@ package templates
 import (
 	"text/template"
 
-	"github.com/lnnujxxy/protoc-gen-star"
-	"github.com/lnnujxxy/protoc-gen-star/lang/go"
+	"github.com/lyft/protoc-gen-star"
+	"github.com/lyft/protoc-gen-star/lang/go"
 	"github.com/lnnujxxy/protoc-gen-validate/templates/cc"
 	"github.com/lnnujxxy/protoc-gen-validate/templates/go"
 	"github.com/lnnujxxy/protoc-gen-validate/templates/gogo"
