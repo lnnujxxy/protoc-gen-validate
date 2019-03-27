@@ -3,7 +3,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library")
 go_library(
     name = "go_default_library",
     srcs = ["pkg.go"],
-    importpath = "github.com/lyft/protoc-gen-validate/templates",
+    importpath = "github.com/lnnujxxy/protoc-gen-validate/templates",
     visibility = ["//visibility:public"],
     deps = [
         "//templates/cc:go_default_library",
@@ -11,7 +11,7 @@ go_library(
         "//templates/gogo:go_default_library",
         "//templates/shared:go_default_library",
         "//templates/java:go_default_library",
-        "//vendor/github.com/lyft/protoc-gen-star:go_default_library",
-        "//vendor/github.com/lyft/protoc-gen-star/lang/go:go_default_library",
+        "//vendor/github.com/lnnujxxy/protoc-gen-star:go_default_library",
+        "//vendor/github.com/lnnujxxy/protoc-gen-star/lang/go:go_default_library",
     ],
 )

@@ -9,7 +9,7 @@ const messageTpl = `
 	{{ else }}
 		if v, ok := interface{}({{ accessor . }}).(interface{ Validate() error }); ok {
 			if err := v.Validate(); err != nil {
-				return {{ errCause . "err" "embedded message failed validation" }}
+				return {{ errCause . "err" "集成message非法" }}
 			}
 		}
 	{{ end }}

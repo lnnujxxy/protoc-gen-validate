@@ -3,8 +3,8 @@ java_library(
     srcs = glob(["*.java"]),
     visibility = ["//tests/harness:__subpackages__"],
     deps = [
-        "//java/pgv-java-stub/src/main/java/com/lyft/pgv",
-        "//java/pgv-java-validation/src/main/java/com/lyft/pgv",
+        "//java/pgv-java-stub/src/main/java/com/lnnujxxy/pgv",
+        "//java/pgv-java-validation/src/main/java/com/lnnujxxy/pgv",
         "//tests/harness:harness_java_proto",
         "//tests/harness/cases:java",
         "//tests/harness/cases/other_package:java",

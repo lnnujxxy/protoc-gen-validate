@@ -6,20 +6,20 @@ const mapTpl = `
 	{{ if $r.GetMinPairs }}
 		{{ if eq $r.GetMinPairs $r.GetMaxPairs }}
 			if len({{ accessor . }}) != {{ $r.GetMinPairs }} {
-				return {{ err . "value must contain exactly " $r.GetMinPairs " pair(s)" }}
+				return {{ err . "必须包含 " $r.GetMinPairs " 键值对" }}
 			}
 		{{ else if $r.MaxPairs }}
 			if l := len({{ accessor . }}); l < {{ $r.GetMinPairs }} || l > {{ $r.GetMaxPairs }} {
-			 	return {{ err . "value must contain between " $r.GetMinPairs " and " $r.GetMaxPairs " pairs, inclusive" }}
+			 	return {{ err . "必须包含在 " $r.GetMinPairs " 和 " $r.GetMaxPairs " 键值对" }}
 			}
 		{{ else }}
 			if len({{ accessor . }}) < {{ $r.GetMinPairs }} {
-				return {{ err . "value must contain at least " $r.GetMinPairs " pair(s)" }}
+				return {{ err . "必须至少包含 " $r.GetMinPairs " 键值对" }}
 			}
 		{{ end }}
 	{{ else if $r.MaxPairs }}
 		if len({{ accessor . }}) > {{ $r.GetMaxPairs }} {
-			return {{ err . "value must contain no more than " $r.GetMaxPairs " pair(s)" }}
+			return {{ err . "包含不超过 " $r.GetMaxPairs " 键值对" }}
 		}
 	{{ end }}
 
@@ -29,7 +29,7 @@ const mapTpl = `
 
 			{{ if $r.GetNoSparse }}
 				if val == nil {
-					return {{ errIdx . "key" "value cannot be sparse, all pairs must be non-nil" }}
+					return {{ errIdx . "key" "不能是空值" }}
 				}
 			{{ end }}
 

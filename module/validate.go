@@ -1,9 +1,9 @@
 package module
 
 import (
-	"github.com/lyft/protoc-gen-star"
-	"github.com/lyft/protoc-gen-star/lang/go"
-	"github.com/lyft/protoc-gen-validate/templates"
+	"github.com/lnnujxxy/protoc-gen-star"
+	"github.com/lnnujxxy/protoc-gen-star/lang/go"
+	"github.com/lnnujxxy/protoc-gen-validate/templates"
 )
 
 const (

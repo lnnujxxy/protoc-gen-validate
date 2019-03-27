@@ -10,8 +10,8 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/duration"
 	"github.com/golang/protobuf/ptypes/timestamp"
-	"github.com/lyft/protoc-gen-star"
-	"github.com/lyft/protoc-gen-validate/validate"
+	"github.com/lnnujxxy/protoc-gen-star"
+	"github.com/lnnujxxy/protoc-gen-validate/validate"
 )
 
 type FieldType interface {

@@ -6,7 +6,7 @@ const repTpl = `
 	{{ if $r.GetMinItems }}
 		{{ if eq $r.GetMinItems $r.GetMaxItems }}
 			if len({{ accessor . }}) != {{ $r.GetMinItems }} {
-				return {{ err . "value must contain exactly " $r.GetMinItems " item(s)" }}
+				return {{ err . "必须完全包含 " $r.GetMinItems " 元素" }}
 			}
 		{{ else if $r.MaxItems }}
 			if l := len({{ accessor . }}); l < {{ $r.GetMinItems }} || l > {{ $r.GetMaxItems }} {
@@ -14,12 +14,12 @@ const repTpl = `
 			}
 		{{ else }}
 			if len({{ accessor . }}) < {{ $r.GetMinItems }} {
-				return {{ err . "value must contain at least " $r.GetMinItems " item(s)" }}
+				return {{ err . "必须至少包含 " $r.GetMinItems " 个元素" }}
 			}
 		{{ end }}
 	{{ else if $r.MaxItems }}
 		if len({{ accessor . }}) > {{ $r.GetMaxItems }} {
-			return {{ err . "value must contain no more than " $r.GetMaxItems " item(s)" }}
+			return {{ err . "包含不超过 " $r.GetMaxItems " 个元素" }}
 		}
 	{{ end }}
 
@@ -36,7 +36,7 @@ const repTpl = `
 			_, _ = idx, item
 			{{ if $r.GetUnique }}
 				if _, exists := {{ lookup $f "Unique" }}[{{ if isBytes $f.Type.Element }}string(item){{ else }}item{{ end }}]; exists {
-					return {{ errIdx . "idx" "repeated value must contain unique items" }}
+					return {{ errIdx . "idx" "重复值必须包含唯一项" }}
 				} else {
 					{{ lookup $f "Unique" }}[{{ if isBytes $f.Type.Element }}string(item){{ else }}item{{ end }}] = struct{}{}
 				}

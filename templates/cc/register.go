@@ -10,9 +10,9 @@ import (
 	"github.com/golang/protobuf/ptypes"
 	"github.com/golang/protobuf/ptypes/duration"
 	"github.com/golang/protobuf/ptypes/timestamp"
-	pgs "github.com/lyft/protoc-gen-star"
-	pgsgo "github.com/lyft/protoc-gen-star/lang/go"
-	"github.com/lyft/protoc-gen-validate/templates/shared"
+	pgs "github.com/lnnujxxy/protoc-gen-star"
+	pgsgo "github.com/lnnujxxy/protoc-gen-star/lang/go"
+	"github.com/lnnujxxy/protoc-gen-validate/templates/shared"
 )
 
 func RegisterModule(tpl *template.Template, params pgs.Parameters) {

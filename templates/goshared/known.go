@@ -5,7 +5,7 @@ const hostTpl = `
 		s := strings.ToLower(strings.TrimSuffix(host, "."))
 
 		if len(host) > 253 {
-			return errors.New("hostname cannot exceed 253 characters")
+			return errors.New("主机名不能超过253个字符")
 		}
 
 		for _, part := range strings.Split(s, ".") {
@@ -14,16 +14,16 @@ const hostTpl = `
 			}
 
 			if part[0] == '-' {
-				return errors.New("hostname parts cannot begin with hyphens")
+				return errors.New("主机名部分不能以连字符开头")
 			}
 
 			if part[len(part)-1] == '-' {
-				return errors.New("hostname parts cannot end with hyphens")
+				return errors.New("主机名部分不能以连字符结尾")
 			}
 
 			for _, r := range part {
 				if (r < 'a' || r > 'z') && (r < '0' || r > '9') && r != '-' {
-					return fmt.Errorf("hostname parts can only contain alphanumeric characters or hyphens, got %q", string(r))
+					return fmt.Errorf("主机名部分只能包含字母数字字符或连字符 %q", string(r))
 				}
 			}
 		}
@@ -41,13 +41,13 @@ const emailTpl = `
 		addr = a.Address
 
 		if len(addr) > 254 {
-			return errors.New("email addresses cannot exceed 254 characters")
+			return errors.New("电子邮件地址不能超过254个字符")
 		}
 
 		parts := strings.SplitN(addr, "@", 2)
 
 		if len(parts[0]) > 64 {
-			return errors.New("email address local phrase cannot exceed 64 characters")
+			return errors.New("电子邮件地址本地短语不能超过64个字符")
 		}
 
 		return m._validateHostname(parts[1])

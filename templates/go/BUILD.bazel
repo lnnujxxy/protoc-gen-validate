@@ -9,10 +9,10 @@ go_library(
         "required.go",
         "timestamp.go",
     ],
-    importpath = "github.com/lyft/protoc-gen-validate/templates/go",
+    importpath = "github.com/lnnujxxy/protoc-gen-validate/templates/go",
     visibility = ["//visibility:public"],
     deps = [
         "//templates/goshared:go_default_library",
-        "//vendor/github.com/lyft/protoc-gen-star:go_default_library",
+        "//vendor/github.com/lnnujxxy/protoc-gen-star:go_default_library",
     ],
 )

@@ -3,7 +3,7 @@
   version = "1.2.0"
 
 [[constraint]]
-  name = "github.com/lyft/protoc-gen-star"
+  name = "github.com/lnnujxxy/protoc-gen-star"
   version = "0.4.4"
 
 [[constraint]]

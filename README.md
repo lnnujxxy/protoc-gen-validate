@@ -71,7 +71,7 @@ Installing PGV can currently only be done from source:
 
 ```sh
 # fetches this repo into $GOPATH
-go get -d github.com/lyft/protoc-gen-validate
+go get -d github.com/lnnujxxy/protoc-gen-validate
 
 # installs PGV into $GOPATH/bin
 make build
@@ -97,7 +97,7 @@ Go generation should occur into the same output path as the official plugin. For
 protoc \
   -I . \
   -I ${GOPATH}/src \
-  -I ${GOPATH}/src/github.com/lyft/protoc-gen-validate \
+  -I ${GOPATH}/src/github.com/lnnujxxy/protoc-gen-validate \
   --go_out=":../generated" \
   --validate_out="lang=go:../generated" \
   example.proto
@@ -115,7 +115,7 @@ command to generate `gogo`-compatible validation code:
 protoc \
   -I . \
   -I ${GOPATH}/src \
-  -I ${GOPATH}/src/github.com/lyft/protoc-gen-validate \
+  -I ${GOPATH}/src/github.com/lnnujxxy/protoc-gen-validate \
   --gogofast_out=":../generated"\
   --validate_out="lang=gogo:../generated" \ example.proto
 ```
@@ -761,7 +761,7 @@ bazel run //tests/harness/executor:executor
 
 ### Docker
 
-PGV comes with a [Dockerfile](/Dockerfile) for consistent development tooling and CI. The main entrypoint is `make` with `quick` as the default target. This repo should be volumed into `/go/src/github.com/lyft/protoc-gen-validate` for the proper behavior.
+PGV comes with a [Dockerfile](/Dockerfile) for consistent development tooling and CI. The main entrypoint is `make` with `quick` as the default target. This repo should be volumed into `/go/src/github.com/lnnujxxy/protoc-gen-validate` for the proper behavior.
 
 ```sh
 # build the image
@@ -769,18 +769,18 @@ docker build -t lyft/protoc-gen-validate .
 
 # executes the default make target: quick
 docker run --rm \
-  -v $(PWD):/go/src/github.com/lyft/protoc-gen-validate \
+  -v $(PWD):/go/src/github.com/lnnujxxy/protoc-gen-validate \
   lyft/protoc-gen-validate
 
 # executes the 'build' & 'generate-testdata' make targets
 docker run --rm \
-  -v $(PWD):/go/src/github.com/lyft/protoc-gen-validate \
+  -v $(PWD):/go/src/github.com/lnnujxxy/protoc-gen-validate \
   lyft/protoc-gen-validate \
   build generate-testdata
 ```
 
 [protoc-source]:   https://github.com/google/protobuf
 [protoc-releases]: https://github.com/google/protobuf/releases
-[pg*]:             https://github.com/lyft/protoc-gen-star
+[pg*]:             https://github.com/lnnujxxy/protoc-gen-star
 [re2]:             https://github.com/google/re2/wiki/Syntax
 [wkts]:            https://developers.google.com/protocol-buffers/docs/reference/google.protobuf

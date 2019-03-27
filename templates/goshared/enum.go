@@ -7,7 +7,7 @@ const enumTpl = `
 
 		{{ if $r.GetDefinedOnly }}
 			if _, ok := {{ (typ $f).Element }}_name[int32({{ accessor . }})]; !ok {
-				return {{ err . "value must be one of the defined enum values" }}
+				return {{ err . "必须是定义的枚举值之一" }}
 			}
 		{{ end }}
 `
